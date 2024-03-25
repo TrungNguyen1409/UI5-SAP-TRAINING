@@ -1,0 +1,114 @@
+{
+    "customers": [
+        {
+            "firstName": "Hans",
+            "lastName": "Hermann",
+            "street": "Spiridon-Louis-Ring",
+            "number": 21,
+            "zip": 80809,
+            "city": "Munich",
+            "country": "Germany",
+            "email": "mail1@address.com",
+            "phone": "+4912345678901"
+        },
+        {
+            "firstName": "Anna",
+            "lastName": "Schmidt",
+            "street": "Bismarckstraße",
+            "number": 12,
+            "zip": 10117,
+            "city": "Berlin",
+            "country": "Germany",
+            "email": "mail2@address.com",
+            "phone": "+4912345678902"
+        },
+        {
+            "firstName": "Luca",
+            "lastName": "Rossi",
+            "street": "Via Roma",
+            "number": 15,
+            "zip": 20121,
+            "city": "Milan",
+            "country": "Italy",
+            "email": "mail3@address.com",
+            "phone": "+4912345678903"
+        },
+        {
+            "firstName": "Sophie",
+            "lastName": "Lefèvre",
+            "street": "Rue de Rivoli",
+            "number": 8,
+            "zip": 75001,
+            "city": "Paris",
+            "country": "France",
+            "email": "mail4@address.com",
+            "phone": "+4912345678904"
+        },
+        {
+            "firstName": "Juan",
+            "lastName": "González",
+            "street": "Calle Mayor",
+            "number": 5,
+            "zip": 28013,
+            "city": "Madrid",
+            "country": "Spain",
+            "email": "mail5@address.com",
+            "phone": "+4912345678905"
+        },
+        {
+            "firstName": "Emily",
+            "lastName": "Smith",
+            "street": "Baker Street",
+            "number": "221B",
+            "zip": "NW1 6XE",
+            "city": "London",
+            "country": "United Kingdom",
+            "email": "mail6@address.com",
+            "phone": "+4912345678906"
+        },
+        {
+            "firstName": "Yuki",
+            "lastName": "Tanaka",
+            "street": "Shibuya",
+            "number": 2,
+            "zip": "150-0002",
+            "city": "Tokyo",
+            "country": "Japan",
+            "email": "mail7@address.com",
+            "phone": "+4912345678907"
+        },
+        {
+            "firstName": "Marta",
+            "lastName": "Garcia",
+            "street": "Carrer de Balmes",
+            "number": 16,
+            "zip": "08007",
+            "city": "Barcelona",
+            "country": "Spain",
+            "email": "mail8@address.com",
+            "phone": "+4912345678908"
+        },
+        {
+            "firstName": "Andreas",
+            "lastName": "Müller",
+            "street": "Neue Straße",
+            "number": 3,
+            "zip": 10178,
+            "city": "Berlin",
+            "country": "Germany",
+            "email": "mail9@address.com",
+            "phone": "+4912345678909"
+        },
+        {
+            "firstName": "Maria",
+            "lastName": "Rossi",
+            "street": "Via della Vittoria",
+            "number": 7,
+            "zip": "00187",
+            "city": "Rome",
+            "country": "Italy",
+            "email": "mail10@address.com",
+            "phone": "+4912345678910"
+        }
+    ]
+}

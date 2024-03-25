@@ -1,0 +1,60 @@
+<mvc:View
+    controllerName="com.myorg.myapp.controller.CustomerPanel"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+>
+    <Panel
+        class="sapUiResponsiveMargin"
+        width="auto"
+        headerText="{i18n>customerPanelHeaderText}"
+        expandable="true"
+        expanded="true"
+    >
+        <content>
+            <f:SimpleForm>
+                <f:toolbar>
+                    <!-- Provide layout information -->
+                    <Toolbar>
+                        <content>
+                            <ToolbarSpacer />
+                            <Button
+                                text="{i18n>saveData}"
+                                press=".onSaveData"
+                            />
+                        </content>
+                    </Toolbar>
+                </f:toolbar>
+                <f:content>
+                    <core:Title text="Contract Information" />
+                    <Label text="{i18n>firstName}" />
+                    <Input value="{customer>/firstName}" />
+                    <Label text="{i18n>lastName}" />
+                    <Input value="{customer>/lastName}" />
+                    <Label text="Street" />
+                    <Input value="{i18n>street}" />
+                    <Label text="Number" />
+                    <Input value="{i18n>number}" />
+                    <Label text="ZIP" />
+                    <Input value="{i18n>zip}" />
+                    <Label text="City" />
+                    <Input value="{i18n>city}" />
+                    <Label text="Country" />
+                    <Input value="{i18n>country}" />
+                    <core:Title text="E-mail and Phone" />
+                    <Label text="E-mail" />
+                    <Input
+                        value="{i18n>email}"
+                        type="Email"
+                    />
+                    <Label text="Phone" />
+                    <Input
+                        value="{i18n>phone}"
+                        type="Tel"
+                    />
+                </f:content>
+            </f:SimpleForm>
+        </content>
+    </Panel>
+</mvc:View>

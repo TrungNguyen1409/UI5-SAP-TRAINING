@@ -3,8 +3,7 @@
 // dependency array --> [dep_1, dep_2] --> dep_1: "sap/m/Text"
 // function implementation --> function(Text)
 sap.ui.define(["./BaseController",
-			   "sap/m/MessageToast",
-			   "sap/ui/model/json/JSONModel"], function (BaseController, MessageToast, JSONModel) {
+			   "sap/ui/model/json/JSONModel"], function (BaseController, JSONModel) {
 	"use strict";
 
 	return BaseController.extend("com.myorg.myapp.controller.Main", {
@@ -24,12 +23,6 @@ sap.ui.define(["./BaseController",
 			// create the model and pass the data
 			const oModel = new JSONModel(jsonData);
 			this.getView().setModel(oModel, "customer");
-		},
-		onSaveData: function() {
-			const oBundle = this.getView().getModel("i18n").getResourceBundle();
-			const sCustomerName = this.getView().getModel("customer").getProperty("/firstName");
-			const sMsg = oBundle.getText("saveMsg",[sCustomerName]);
-			MessageToast.show(sMsg);
 		}
 	});
 });

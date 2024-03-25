@@ -51,6 +51,10 @@
 				"settings": {
 					"bundleName": "com.myorg.myapp.i18n.i18n"
 				}
+			},
+			"customers":{
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/data.json"
 			}
 		},
 
