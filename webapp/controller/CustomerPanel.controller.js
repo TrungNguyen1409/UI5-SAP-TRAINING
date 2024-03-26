@@ -3,15 +3,7 @@ sap.ui.define(["./BaseController","sap/ui/model/json/JSONModel","sap/m/MessageTo
 
     return BaseController.extend("com.myorg.myapp.controller.CustomerPanel", {
         onSaveData: function () {
-            const oBundle = this.getView().getModel("i18n").getResourceBundle();
-            const sCustomerName = this.getView().getModel("customer").getProperty("/firstName");
-            const sMsg = oBundle.getText("saveMsg", [sCustomerName]);
-            MessageToast.show(sMsg);
-            //this.onOpenDialog();
-            const oModel = this.getView().getModel("customers");
-            const aItems = oModel.getProperty("/customers");
-            aItems.push(this.getView().getModel("customer").getData());
-            oModel.setProperty("/customers",aItems);
+            this.onOpenDialog();
         },
         onOpenDialog() {
             this.pDialog ??= this.loadFragment({
@@ -21,6 +13,17 @@ sap.ui.define(["./BaseController","sap/ui/model/json/JSONModel","sap/m/MessageTo
         },
         onCloseDialog() {
             this.byId("confirmDialog").close()
+        },
+        onAccept(){
+            const oModel = this.getView().getModel("customers");
+            const aItems = oModel.getProperty("/customers");
+            aItems.push(this.getView().getModel("customer").getData());
+            oModel.setProperty("/customers",aItems);
+            this.byId("confirmDialog").close()
+            const oBundle = this.getView().getModel("i18n").getResourceBundle();
+            const sCustomerName = this.getView().getModel("customer").getProperty("/firstName");
+            const sMsg = oBundle.getText("saveMsg", [sCustomerName]);
+            MessageToast.show(sMsg);
         }
     });
 });
