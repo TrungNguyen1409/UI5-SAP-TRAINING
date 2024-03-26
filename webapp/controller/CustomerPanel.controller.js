@@ -15,7 +15,7 @@ sap.ui.define(["./BaseController","sap/ui/model/json/JSONModel","sap/m/MessageTo
             this.byId("confirmDialog").close()
         },
         onAccept(){
-            const oModel = this.getView().getModel("customers");
+            const oModel = this.getView().getModel();
             const aItems = oModel.getProperty("/customers");
             aItems.push(this.getView().getModel("customer").getData());
             oModel.setProperty("/customers",aItems);
