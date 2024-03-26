@@ -1,9 +1,23 @@
-sap.ui.define(["./BaseController","sap/ui/model/json/JSONModel","sap/m/MessageToast"], function (BaseController, JSONModel,MessageToast) {
+sap.ui.define(["./BaseController", "sap/ui/model/json/JSONModel", "sap/m/MessageToast"], function (BaseController, JSONModel, MessageToast) {
     "use strict";
 
     return BaseController.extend("com.myorg.myapp.controller.CustomerPanel", {
         onSaveData: function () {
-            this.onOpenDialog();
+
+            let errorState = false;
+            const aInputs = this.getView().getControlsByFieldGroupId("myInputs");
+            aInputs.forEach(control => {
+                if (control instanceof sap.m.Input 
+                    && control.getValueState() === sap.ui.core.ValueState.Error) {
+                        errorState = true;
+                }
+            })
+            if(errorState){
+                MessageToast.show(this.getView().getModel("i18n").getResourceBundle().getText("validationError"));
+            }else{
+                this.onOpenDialog();
+
+            }
         },
         onOpenDialog() {
             this.pDialog ??= this.loadFragment({
@@ -14,18 +28,18 @@ sap.ui.define(["./BaseController","sap/ui/model/json/JSONModel","sap/m/MessageTo
         onCloseDialog() {
             this.byId("confirmDialog").close()
         },
-        onAccept(){
+        onAccept() {
             const oModel = this.getView().getModel();
             const aItems = oModel.getProperty("/customers");
-            aItems.push({...this.getView().getModel("customer").getData()});
-            oModel.setProperty("/customers",aItems);
+            aItems.push({ ...this.getView().getModel("customer").getData() });
+            oModel.setProperty("/customers", aItems);
             this.byId("confirmDialog").close()
             const oBundle = this.getView().getModel("i18n").getResourceBundle();
             const sCustomerName = this.getView().getModel("customer").getProperty("/firstName");
             const sMsg = oBundle.getText("saveMsg", [sCustomerName]);
             MessageToast.show(sMsg);
 
-
+            // clear model
             this.getView().setModel(new JSONModel(), "customer");
         }
     });

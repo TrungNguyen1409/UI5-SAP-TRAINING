@@ -29,29 +29,56 @@
                 <f:content>
                     <core:Title text="Contract Information" />
                     <Label text="{i18n>firstName}" />
-                    <Input value="{customer>/firstName}" />
+                    <Input
+                        value="{path: 'customer>/firstName',
+                                type:'sap.ui.model.type.String',
+                                constraints:{minimum: 1}}"
+                        fieldGroupIds="myInputs"
+                    />
                     <Label text="{i18n>lastName}" />
-                    <Input value="{customer>/lastName}" />
+                    <Input
+                        value="{customer>/lastName}"
+                        fieldGroupIds="myInputs"
+                    />
                     <Label text="{i18n>street}" />
-                    <Input value="{customer>/street}" />
+                    <Input
+                        value="{customer>/street}"
+                        fieldGroupIds="myInputs"
+                    />
                     <Label text="{i18n>number}" />
-                    <Input value="{customer>/number}" />
+                    <Input
+                        value="{path: 'customer>/number',
+                        type:'sap.ui.model.type.Integer',
+                        constraints:{minimum: 0, maxium: 99999}}"
+                        fieldGroupIds="myInputs"
+                    />
                     <Label text="{i18n>zip}" />
-                    <Input value="{customer>/zip}" />
+                    <Input
+                        value="{customer>/zip}"
+                        fieldGroupIds="myInputs"
+                    />
                     <Label text="{i18n>city}" />
-                    <Input value="{customer>/city}" />
+                    <Input
+                        value="{customer>/city}"
+                        fieldGroupIds="myInputs"
+                    />
                     <Label text="{i18n>country}" />
-                    <Input value="{customer>/country}" />
+                    <Input
+                        value="{customer>/country}"
+                        fieldGroupIds="myInputs"
+                    />
                     <core:Title text="E-mail and Phone" />
                     <Label text="{i18n>email}" />
                     <Input
                         value="{customer>/mail}"
                         type="Email"
+                        fieldGroupIds="myInputs"
                     />
                     <Label text="{i18n>phone}" />
                     <Input
                         value="{customer>/phone}"
                         type="Tel"
+                        fieldGroupIds="myInputs"
                     />
                 </f:content>
             </f:SimpleForm>
