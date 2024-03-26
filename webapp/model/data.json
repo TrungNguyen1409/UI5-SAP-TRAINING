@@ -1,6 +1,7 @@
 {
     "customers": [
         {
+            "id": 1,
             "firstName": "Hans",
             "lastName": "Hermann",
             "street": "Spiridon-Louis-Ring",
@@ -9,9 +10,22 @@
             "city": "Munich",
             "country": "Germany",
             "email": "mail1@address.com",
-            "phone": "+4912345678901"
+            "phone": "+4912345678901",
+            "_orders": [
+                {
+                    "orderId": 123,
+                    "totalAmount": 1200,
+                    "currency": "EUR"
+                },
+                {
+                    "orderId": 126,
+                    "totalAmount": 700,
+                    "currency": "GBP"
+                }
+            ]
         },
         {
+            "id": 2,
             "firstName": "Anna",
             "lastName": "Schmidt",
             "street": "Bismarckstraße",
@@ -21,18 +35,21 @@
             "country": "Germany",
             "email": "mail2@address.com",
             "phone": "+4912345678902",
-            "_orders": [{
-                "orderId": 123,
-                "totalAmount": 1200,
-                "currency": "EUR"
-            },
-            {
-                "orderId": 125,
-                "totalAmount": 500,
-                "currency": "USD"
-            }]
+            "_orders": [
+                {
+                    "orderId": 124,
+                    "totalAmount": 1500,
+                    "currency": "USD"
+                },
+                {
+                    "orderId": 127,
+                    "totalAmount": 900,
+                    "currency": "EUR"
+                }
+            ]
         },
         {
+            "id": 3,
             "firstName": "Luca",
             "lastName": "Rossi",
             "street": "Via Roma",
@@ -42,18 +59,21 @@
             "country": "Italy",
             "email": "mail3@address.com",
             "phone": "+4912345678903",
-            "_orders": [{
-                "orderId": 123,
-                "totalAmount": 1200,
-                "currency": "EUR"
-            },
-            {
-                "orderId": 125,
-                "totalAmount": 500,
-                "currency": "USD"
-            }]
+            "_orders": [
+                {
+                    "orderId": 125,
+                    "totalAmount": 500,
+                    "currency": "USD"
+                },
+                {
+                    "orderId": 128,
+                    "totalAmount": 800,
+                    "currency": "EUR"
+                }
+            ]
         },
         {
+            "id": 4,
             "firstName": "Sophie",
             "lastName": "Lefèvre",
             "street": "Rue de Rivoli",
@@ -63,18 +83,21 @@
             "country": "France",
             "email": "mail4@address.com",
             "phone": "+4912345678904",
-            "_orders": [{
-                "orderId": 123,
-                "totalAmount": 1200,
-                "currency": "EUR"
-            },
-            {
-                "orderId": 125,
-                "totalAmount": 500,
-                "currency": "USD"
-            }]
+            "_orders": [
+                {
+                    "orderId": 126,
+                    "totalAmount": 700,
+                    "currency": "EUR"
+                },
+                {
+                    "orderId": 129,
+                    "totalAmount": 1000,
+                    "currency": "USD"
+                }
+            ]
         },
         {
+            "id": 5,
             "firstName": "Juan",
             "lastName": "González",
             "street": "Calle Mayor",
@@ -84,71 +107,93 @@
             "country": "Spain",
             "email": "mail5@address.com",
             "phone": "+4912345678905",
-            "_orders": [{
-                "orderId": 123,
-                "totalAmount": 1200,
-                "currency": "EUR"
-            },
-            {
-                "orderId": 125,
-                "totalAmount": 500,
-                "currency": "USD"
-            }]
+            "_orders": [
+                {
+                    "orderId": 127,
+                    "totalAmount": 900,
+                    "currency": "USD"
+                },
+                {
+                    "orderId": 130,
+                    "totalAmount": 1200,
+                    "currency": "EUR"
+                }
+            ]
         },
         {
+            "id": 6,
             "firstName": "Emily",
             "lastName": "Smith",
             "street": "Baker Street",
-            "number": "221B",
+            "number": 221,
             "zip": "NW1 6XE",
             "city": "London",
             "country": "United Kingdom",
             "email": "mail6@address.com",
             "phone": "+4912345678906",
-            "_orders": [{
-                "orderId": 123,
-                "totalAmount": 1200,
-                "currency": "EUR"
-            },
-            {
-                "orderId": 125,
-                "totalAmount": 500,
-                "currency": "USD"
-            }]
+            "_orders": [
+                {
+                    "orderId": 128,
+                    "totalAmount": 800,
+                    "currency": "GBP"
+                },
+                {
+                    "orderId": 131,
+                    "totalAmount": 1300,
+                    "currency": "USD"
+                }
+            ]
         },
         {
+            "id": 7,
             "firstName": "Yuki",
             "lastName": "Tanaka",
             "street": "Shibuya",
             "number": 2,
-            "zip": "150-0002",
+            "zip": 1500002,
             "city": "Tokyo",
             "country": "Japan",
             "email": "mail7@address.com",
-            "phone": "+4912345678907"
+            "phone": "+4912345678907",
+            "_orders": [
+                {
+                    "orderId": 129,
+                    "totalAmount": 1000,
+                    "currency": "USD"
+                },
+                {
+                    "orderId": 132,
+                    "totalAmount": 1400,
+                    "currency": "EUR"
+                }
+            ]
         },
         {
+            "id": 8,
             "firstName": "Marta",
             "lastName": "Garcia",
             "street": "Carrer de Balmes",
             "number": 16,
-            "zip": "08007",
+            "zip": 8007,
             "city": "Barcelona",
             "country": "Spain",
             "email": "mail8@address.com",
             "phone": "+4912345678908",
-            "_orders": [{
-                "orderId": 123,
-                "totalAmount": 1200,
-                "currency": "EUR"
-            },
-            {
-                "orderId": 125,
-                "totalAmount": 500,
-                "currency": "USD"
-            }]
+            "_orders": [
+                {
+                    "orderId": 130,
+                    "totalAmount": 1200,
+                    "currency": "EUR"
+                },
+                {
+                    "orderId": 133,
+                    "totalAmount": 1500,
+                    "currency": "USD"
+                }
+            ]
         },
         {
+            "id": 9,
             "firstName": "Andreas",
             "lastName": "Müller",
             "street": "Neue Straße",
@@ -158,37 +203,42 @@
             "country": "Germany",
             "email": "mail9@address.com",
             "phone": "+4912345678909",
-            "_orders": [{
-                "orderId": 123,
-                "totalAmount": 1200,
-                "currency": "EUR"
-            },
-            {
-                "orderId": 125,
-                "totalAmount": 500,
-                "currency": "USD"
-            }]
+            "_orders": [
+                {
+                    "orderId": 131,
+                    "totalAmount": 1300,
+                    "currency": "USD"
+                },
+                {
+                    "orderId": 134,
+                    "totalAmount": 1600,
+                    "currency": "EUR"
+                }
+            ]
         },
         {
+            "id": 10,
             "firstName": "Maria",
             "lastName": "Rossi",
             "street": "Via della Vittoria",
             "number": 7,
-            "zip": "00187",
+            "zip": 187,
             "city": "Rome",
             "country": "Italy",
             "email": "mail10@address.com",
             "phone": "+4912345678910",
-            "_orders": [{
-                "orderId": 123,
-                "totalAmount": 1200,
-                "currency": "EUR"
-            },
-            {
-                "orderId": 125,
-                "totalAmount": 500,
-                "currency": "USD"
-            }]
+            "_orders": [
+                {
+                    "orderId": 132,
+                    "totalAmount": 1400,
+                    "currency": "EUR"
+                },
+                {
+                    "orderId": 135,
+                    "totalAmount": 1700,
+                    "currency": "USD"
+                }
+            ]
         }
     ]
 }

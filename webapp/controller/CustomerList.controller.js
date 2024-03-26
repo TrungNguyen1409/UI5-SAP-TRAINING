@@ -26,13 +26,14 @@ sap.ui.define(["./BaseController","sap/ui/model/Filter","sap/ui/model/FilterOper
             console.log(aFilter)
             oBinding.filter(aFilter);
         },
-        onCustomerChange(oEvent){
-            // oBindingContext contains one row of our table (so one customer)
-            const oBindingContext = oEvent.getParameter("listItem").getBindingContext();
-            this.byId("ordersTable").setBindingContext(oBindingContext);
-        },
-        onPressCustomer(){
-            this.getRouter().navTo("detail");
+        onPressCustomer(oEvent){
+            // oItem refers to the clikced line, e.g., one customer
+            var oItem = oEvent.getSource();
+            this.getRouter().navTo("detail",{
+                customerId: oItem.getBindingContext().getPath().substring('/customers/'.length)
+            })
+            //this.getRouter().navTo("detail");
+
         }
 	});
 });
