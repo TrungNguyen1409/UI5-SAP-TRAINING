@@ -28,7 +28,8 @@ sap.ui.define(["./BaseController","sap/ui/model/Filter","sap/ui/model/FilterOper
         },
         onCustomerChange(oEvent){
             // oBindingContext contains one row of our table (so one customer)
-            const oBindingContext = oEvent.getParameter("listItem").getBindingContext("customers");
+            const oBindingContext = oEvent.getParameter("listItem").getBindingContext();
+            console.log(oBindingContext)
             this.byId("ordersTable").setBindingContext(oBindingContext);
         }
 	});

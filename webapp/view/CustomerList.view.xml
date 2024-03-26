@@ -80,7 +80,7 @@
         </items>
     </Table>
     <Table
-        id="orderedTable"
+        id="ordersTable"
         headerText="{i18n>orders}"
         items="{_orders}"
         class="sapUiResponsiveMargin"

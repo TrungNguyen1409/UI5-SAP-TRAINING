@@ -17,13 +17,16 @@ sap.ui.define(["./BaseController","sap/ui/model/json/JSONModel","sap/m/MessageTo
         onAccept(){
             const oModel = this.getView().getModel();
             const aItems = oModel.getProperty("/customers");
-            aItems.push(this.getView().getModel("customer").getData());
+            aItems.push({...this.getView().getModel("customer").getData()});
             oModel.setProperty("/customers",aItems);
             this.byId("confirmDialog").close()
             const oBundle = this.getView().getModel("i18n").getResourceBundle();
             const sCustomerName = this.getView().getModel("customer").getProperty("/firstName");
             const sMsg = oBundle.getText("saveMsg", [sCustomerName]);
             MessageToast.show(sMsg);
+
+
+            this.getView().setModel(new JSONModel(), "customer");
         }
     });
 });
