@@ -32,25 +32,25 @@
                     <Input value="{customer>/firstName}" />
                     <Label text="{i18n>lastName}" />
                     <Input value="{customer>/lastName}" />
-                    <Label text="Street" />
-                    <Input value="{i18n>street}" />
-                    <Label text="Number" />
-                    <Input value="{i18n>number}" />
-                    <Label text="ZIP" />
-                    <Input value="{i18n>zip}" />
-                    <Label text="City" />
-                    <Input value="{i18n>city}" />
-                    <Label text="Country" />
-                    <Input value="{i18n>country}" />
+                    <Label text="{i18n>street}" />
+                    <Input value="{customer>/street}" />
+                    <Label text="{i18n>number}" />
+                    <Input value="{customer>/number}" />
+                    <Label text="{i18n>zip}" />
+                    <Input value="{customer>/zip}" />
+                    <Label text="{i18n>city}" />
+                    <Input value="{customer>/city}" />
+                    <Label text="{i18n>country}" />
+                    <Input value="{customer>/country}" />
                     <core:Title text="E-mail and Phone" />
-                    <Label text="E-mail" />
+                    <Label text="{i18n>email}" />
                     <Input
-                        value="{i18n>email}"
+                        value="{customer>/mail}"
                         type="Email"
                     />
-                    <Label text="Phone" />
+                    <Label text="{i18n>phone}" />
                     <Input
-                        value="{i18n>phone}"
+                        value="{customer>/phone}"
                         type="Tel"
                     />
                 </f:content>

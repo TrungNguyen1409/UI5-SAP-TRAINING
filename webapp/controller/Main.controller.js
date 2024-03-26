@@ -23,6 +23,9 @@ sap.ui.define(["./BaseController",
 			// create the model and pass the data
 			const oModel = new JSONModel(jsonData);
 			this.getView().setModel(oModel, "customer");
+
 		}
+		
+		
 	});
 });

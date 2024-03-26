@@ -20,7 +20,17 @@
             "city": "Berlin",
             "country": "Germany",
             "email": "mail2@address.com",
-            "phone": "+4912345678902"
+            "phone": "+4912345678902",
+            "_orders": [{
+                "orderId": 123,
+                "totalAmount": 1200,
+                "currency": "EUR"
+            },
+            {
+                "orderId": 125,
+                "totalAmount": 500,
+                "currency": "USD"
+            }]
         },
         {
             "firstName": "Luca",
@@ -31,7 +41,17 @@
             "city": "Milan",
             "country": "Italy",
             "email": "mail3@address.com",
-            "phone": "+4912345678903"
+            "phone": "+4912345678903",
+            "_orders": [{
+                "orderId": 123,
+                "totalAmount": 1200,
+                "currency": "EUR"
+            },
+            {
+                "orderId": 125,
+                "totalAmount": 500,
+                "currency": "USD"
+            }]
         },
         {
             "firstName": "Sophie",
@@ -42,7 +62,17 @@
             "city": "Paris",
             "country": "France",
             "email": "mail4@address.com",
-            "phone": "+4912345678904"
+            "phone": "+4912345678904",
+            "_orders": [{
+                "orderId": 123,
+                "totalAmount": 1200,
+                "currency": "EUR"
+            },
+            {
+                "orderId": 125,
+                "totalAmount": 500,
+                "currency": "USD"
+            }]
         },
         {
             "firstName": "Juan",
@@ -53,7 +83,17 @@
             "city": "Madrid",
             "country": "Spain",
             "email": "mail5@address.com",
-            "phone": "+4912345678905"
+            "phone": "+4912345678905",
+            "_orders": [{
+                "orderId": 123,
+                "totalAmount": 1200,
+                "currency": "EUR"
+            },
+            {
+                "orderId": 125,
+                "totalAmount": 500,
+                "currency": "USD"
+            }]
         },
         {
             "firstName": "Emily",
@@ -64,7 +104,17 @@
             "city": "London",
             "country": "United Kingdom",
             "email": "mail6@address.com",
-            "phone": "+4912345678906"
+            "phone": "+4912345678906",
+            "_orders": [{
+                "orderId": 123,
+                "totalAmount": 1200,
+                "currency": "EUR"
+            },
+            {
+                "orderId": 125,
+                "totalAmount": 500,
+                "currency": "USD"
+            }]
         },
         {
             "firstName": "Yuki",
@@ -86,7 +136,17 @@
             "city": "Barcelona",
             "country": "Spain",
             "email": "mail8@address.com",
-            "phone": "+4912345678908"
+            "phone": "+4912345678908",
+            "_orders": [{
+                "orderId": 123,
+                "totalAmount": 1200,
+                "currency": "EUR"
+            },
+            {
+                "orderId": 125,
+                "totalAmount": 500,
+                "currency": "USD"
+            }]
         },
         {
             "firstName": "Andreas",
@@ -97,7 +157,17 @@
             "city": "Berlin",
             "country": "Germany",
             "email": "mail9@address.com",
-            "phone": "+4912345678909"
+            "phone": "+4912345678909",
+            "_orders": [{
+                "orderId": 123,
+                "totalAmount": 1200,
+                "currency": "EUR"
+            },
+            {
+                "orderId": 125,
+                "totalAmount": 500,
+                "currency": "USD"
+            }]
         },
         {
             "firstName": "Maria",
@@ -108,7 +178,17 @@
             "city": "Rome",
             "country": "Italy",
             "email": "mail10@address.com",
-            "phone": "+4912345678910"
+            "phone": "+4912345678910",
+            "_orders": [{
+                "orderId": 123,
+                "totalAmount": 1200,
+                "currency": "EUR"
+            },
+            {
+                "orderId": 125,
+                "totalAmount": 500,
+                "currency": "USD"
+            }]
         }
     ]
 }

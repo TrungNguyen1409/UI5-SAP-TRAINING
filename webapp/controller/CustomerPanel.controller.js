@@ -1,22 +1,26 @@
-sap.ui.define(["./BaseController", "sap/m/MessageToast"], function (BaseController, MessageToast) {
-	"use strict";
+sap.ui.define(["./BaseController","sap/ui/model/json/JSONModel","sap/m/MessageToast"], function (BaseController, JSONModel,MessageToast) {
+    "use strict";
 
-	return BaseController.extend("com.myorg.myapp.controller.CustomerPanel", {
-        onSaveData: function() {
-			const oBundle = this.getView().getModel("i18n").getResourceBundle();
-			const sCustomerName = this.getView().getModel("customer").getProperty("/firstName");
-			const sMsg = oBundle.getText("saveMsg",[sCustomerName]);
-			//MessageToast.show(sMsg);
-            this.onOpenDialog()
-		},
-        onOpenDialog(){
+    return BaseController.extend("com.myorg.myapp.controller.CustomerPanel", {
+        onSaveData: function () {
+            const oBundle = this.getView().getModel("i18n").getResourceBundle();
+            const sCustomerName = this.getView().getModel("customer").getProperty("/firstName");
+            const sMsg = oBundle.getText("saveMsg", [sCustomerName]);
+            MessageToast.show(sMsg);
+            //this.onOpenDialog();
+            const oModel = this.getView().getModel("customers");
+            const aItems = oModel.getProperty("/customers");
+            aItems.push(this.getView().getModel("customer").getData());
+            oModel.setProperty("/customers",aItems);
+        },
+        onOpenDialog() {
             this.pDialog ??= this.loadFragment({
                 name: "com.myorg.myapp.view.Confirmation"
             });
             this.pDialog.then(oDialog => oDialog.open());
         },
-        onCloseDialog(){
+        onCloseDialog() {
             this.byId("confirmDialog").close()
         }
-	});
+    });
 });

@@ -8,7 +8,7 @@
             <Button type="Reject" text="{i18n>dialogClose}"  press=".onCloseDialog" icon="sap-icon://decline"/>
         </beginButton>
         <endButton>
-            <Button type="Accept" text="{i18n>dialogAccept}" icon="sap-icon://accept"/>
+            <Button type="Accept" text="{i18n>dialogAccept}" press=".onAcceptChange" icon="sap-icon://accept"/>
         </endButton>
     </Dialog>
 
