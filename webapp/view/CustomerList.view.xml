@@ -67,7 +67,7 @@
         </columns>
         <items>
             <!-- Represents one roew of the customers list -->
-            <ColumnListItem>
+            <ColumnListItem type="Navigation" press=".onPressCustomer">
                 <cells>
                     <Text text="{firstName}" />
                     <Text text="{lastName}" />
